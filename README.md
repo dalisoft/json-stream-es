@@ -153,7 +153,7 @@ Please also take note of the [differences between `JSON.stringify()` and `string
 
 While the JSON standard only allows one JSON document per file, there are various variations of it to stream multiple documents. To emit such a stream, use the [`stringifyMultiJsonStream`](#stringifymultijsonstream) function, which returns a `TransformStream<JsonValue, string>`:
 ```typescript
-import { stringifyMultiJsonStream } from "json-stream-es";
+import { stringifyMultiJsonStream, iterableToStream } from "json-stream-es";
 
 const values = [
 	{ test1: "object1" },
